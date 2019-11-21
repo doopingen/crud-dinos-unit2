@@ -1,0 +1,9 @@
+<ul>
+    <% crypts.forEach(function(crypt, id) { %>
+        <li><a href="<%= crypt.img_url %>"><%= crypt.name %></a></li>
+        <a href="/cryptids/edit/<%= id %>">Edit <%= crypt.name %></a>
+        <form action="/cryptids/<%= id %>/?_method=DELETE" method="post">
+            <input type="submit" value="X">
+        </form>
+   <% }); %>
+</ul>

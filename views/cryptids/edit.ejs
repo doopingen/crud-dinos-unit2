@@ -1,0 +1,11 @@
+<h1>Edit <%= crypt.name %> </h1>
+
+<form method="POST" action="/cryptids/<%= cryptIndex %>/?_method=PUT">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= crypt.name %>">
+
+    <label for="type">Image URL:</label>
+    <input type="text" name="type" id="img_url" value="<%= crypt.img_url %>">
+
+    <input type="submit" value="Edit <%= crypt.name %>">
+</form>
